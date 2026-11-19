@@ -1,8 +1,8 @@
 variable = "TTB-CHIPS-2026-11"
-list = variable.split("-")
-# print(list)
-year = int(list[2])
-month = int(list[3])
+neo_list = variable.split("-")
+print(neo_list)
+year = int(neo_list[2])
+month = int(neo_list[3])
 print(month + 1)
 
 string = "  ttb-chips  "
@@ -11,7 +11,7 @@ print(clean_string)
 
 qty=98765.4321
 
-print(f"{qty:.2f}")
+print(f"{qty:,.2f}")
 
 perc_value = 0.734
 
@@ -21,6 +21,13 @@ batch="B2026111900042"
 
 date = batch[1:9]
 sequence = batch[9:14]
+print(date)
+print(sequence)
+
+date_example = "2026-11-19"
+date_list = date_example.split("-")
+date_final = "/".join(date_list[::-1])
+print(date_final)
 
 alphabet = "A-B-C-D"
 print(alphabet.count("-"))
@@ -31,7 +38,7 @@ print(string2.endswith("_TEMP"))
 
 string3 = "Line 3 Packing Speed"
 
-replaced_string = string3.replace(" ", "-")
+replaced_string = string3.replace(" ", "_")
 print(replaced_string)
 
 print(f"{7:03d}")
@@ -52,4 +59,4 @@ word = string5[position:position + len("CHIPS")]
 print(word)
 
 plant = "TTB"; line = 3; output = 12450; oee = 0.812
-print(f"[{plant}] Line {line} | Output: {output:,.2f} kg | OEE: {oee:.1%}")
+print(f"[{plant}] Line {line} | Output: {output:,.0f} kg | OEE: {oee:.1%}")
