@@ -52,4 +52,4 @@ word = string5[position:position + len("CHIPS")]
 print(word)
 
 plant = "TTB"; line = 3; output = 12450; oee = 0.812
-print(f"[{plant}] Line {line} | Output: {output:,} kg | OEE: {oee:.1%}")
+print(f"[{plant}] Line {line} | Output: {output:,.2f} kg | OEE: {oee:.1%}")

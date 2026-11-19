@@ -12,7 +12,7 @@
 | a \|\| b | a + b | |
 | s LIKE 'TTB%' | s.startswith("TTB") | |
 | s LIKE '%CHIPS%' | "CHIPS" in s | |
-| TO_CHAR(n,'9,999.99') | | |
+| TO_CHAR(n,'9,999.99') | f"{n:,.2f}"| |
 | TO_NUMBER('12') | int("12") | |
 | LPAD(n,3,'0') | f{"n:03d"} | |
 | IS NULL | is None | |
